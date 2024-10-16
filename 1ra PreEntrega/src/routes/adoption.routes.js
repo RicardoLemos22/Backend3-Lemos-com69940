@@ -1,7 +1,7 @@
+import { AdoptionControllers } from "../controllers/adoptions.controller.js";
 import { Router } from "express";
-import { AdoptionsController } from "../controllers/adoptions.controller.js";
 
-const adoptionsController = new AdoptionsController();
+const adoptionsController = new AdoptionControllers();
 const router = Router();
 
 router.get("/", adoptionsController.getAllAdoptions);

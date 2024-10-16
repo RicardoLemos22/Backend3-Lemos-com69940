@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "e5aa1679-197a-4bad-9a3c-04756c3c5c1a",
+		"name": "BE3 - 1ra Entrega - Ricardo Lemos - com69940",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34243539"
+	},
+	"item": [
+		{
+			"name": "mockingusers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/mocks/mockingusers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"mocks",
+						"mockingusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mockingpets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/mocks/mockingpets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"mocks",
+						"mockingpets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/mocks/generateData/11/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"mocks",
+						"generateData",
+						"11",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

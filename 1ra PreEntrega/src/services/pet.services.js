@@ -4,10 +4,12 @@ export class PetServices {
   constructor() {
     this.petDao = new Pet();
   }
+
   async getAll() {
     const pets = await this.petDao.get();
     return pets;
   }
+
   async getById(id) {
     const pet = await this.petDao.getBy(id);
     if (!pet) throw customError.notFoundError(`Pet id ${id} not found`);

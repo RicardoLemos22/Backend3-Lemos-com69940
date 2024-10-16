@@ -4,10 +4,12 @@ export class AdoptionServices {
   constructor() {
     this.adoptionDao = new Adoption();
   }
+
   async getAll() {
     const adoptions = await this.adoptionDao.get();
     return adoptions;
   }
+
   async getById(id) {
     const adoption = await this.adoptionDao.getBy(id);
     if (!adoption) throw customError.notFoundError(`Adoption id ${id} not found`);

@@ -11,8 +11,6 @@ export const conectarMongoDB = async() => {
         console.log("Servidor local conectado al servicio MongoDB remoto");
 
     } catch (error) {
-        // muestro el objeto Error completo para entender que puede fallar
         console.log(`Error: ${error}`);
-
     }
 }

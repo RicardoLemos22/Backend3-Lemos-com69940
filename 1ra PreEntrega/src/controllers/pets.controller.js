@@ -1,5 +1,5 @@
-import PetDTO from "../dto/Pet.dto.js";
 import __dirname from "../utils/dirname.js";
+import PetDTO from "../dto/Pet.dto.js";
 import { PetServices } from "../services/pet.services.js";
 
 export class PetsController {
@@ -11,6 +11,7 @@ export class PetsController {
     try {
       const pets = await this.petService.getAll();
       res.send({ status: "success", payload: pets });
+
     } catch (error) {
       next(error);
     }
@@ -19,10 +20,14 @@ export class PetsController {
   createPet = async (req, res, next) => {
     try {
       const { name, specie, birthDate } = req.body;
+
       if (!name || !specie || !birthDate) return res.status(400).send({ status: "error", error: "Incomplete values" });
+
       const pet = PetDTO.getPetInputFrom({ name, specie, birthDate });
       const result = await this.petService.create(pet);
+
       res.send({ status: "success", payload: result });
+
     } catch (error) {
       next(error);
     }
@@ -33,7 +38,9 @@ export class PetsController {
       const petUpdateBody = req.body;
       const petId = req.params.pid;
       const result = await this.petService.update(petId, petUpdateBody);
+
       res.send({ status: "success", message: "pet updated" });
+
     } catch (error) {
       next(error);
     }
@@ -43,7 +50,9 @@ export class PetsController {
     try {
       const petId = req.params.pid;
       const result = await this.petService.remove(petId);
+      
       res.send({ status: "success", message: "pet deleted" });
+
     } catch (error) {
       next(error);
     }
@@ -53,17 +62,21 @@ export class PetsController {
     try {
       const file = req.file;
       const { name, specie, birthDate } = req.body;
+      
       if (!name || !specie || !birthDate) return res.status(400).send({ status: "error", error: "Incomplete values" });
-      console.log(file);
+      //console.log(file);
+      
       const pet = PetDTO.getPetInputFrom({
         name,
         specie,
         birthDate,
         image: `${__dirname}/../public/img/${file.filename}`,
       });
-      console.log(pet);
+      
+      //console.log(pet);
       const result = await petsService.create(pet);
       res.send({ status: "success", payload: result });
+
     } catch (error) {
       next(error);
     }
