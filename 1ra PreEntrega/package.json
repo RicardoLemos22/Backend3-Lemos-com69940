@@ -1,7 +1,7 @@
 {
   "name": "1ra-preentrega",
   "version": "1.0.0",
-  "description": "Primera entrega del curso Backend 2 - Comisión 69940",
+  "description": "Primera entrega del curso Backend 3 - Comisión 69940",
   "main": "index.js",
   "type": "module",
   "scripts": {
