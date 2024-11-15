@@ -1,0 +1,4 @@
+2024-11-15 18:06:16 [[31merror[39m]: _id Cast to ObjectId failed for value "all" (type string) at path "_id" for model "Adoptions"
+2024-11-15 18:09:04 [[32minfo[39m]: El servidor ahora esta escuchando en el puerto 8082
+2024-11-15 18:09:26 [[32minfo[39m]: El servidor ahora esta escuchando en el puerto 8082
+2024-11-15 18:09:27 [[32minfo[39m]: El servidor ahora esta escuchando en el puerto 8082

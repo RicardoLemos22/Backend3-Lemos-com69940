@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 // Hash de una contraseña 
 export const createHash = (password) => {
