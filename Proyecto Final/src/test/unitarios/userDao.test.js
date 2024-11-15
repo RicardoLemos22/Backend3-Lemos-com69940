@@ -1,8 +1,9 @@
-import Users from "../../../../../backend-69940/after/src/dao/Users.dao.js";
+import Users from "../../dao/Users.dao.js";
 import mongoose from "mongoose";
+import { conectarMongoDB } from "../../config/mongoDB.config.js";
 import { expect } from "chai";
 
-mongoose.connect("mongodb://localhost:27017/clase-9");
+conectarMongoDB();
 
 // Describir nuestro test
 describe("Test UserDao", () => {

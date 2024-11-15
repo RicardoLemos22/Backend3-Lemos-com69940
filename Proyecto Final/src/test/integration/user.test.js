@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import supertest from "supertest";
+// import envs from "./config/envs.config.js";
 
 const request = supertest("http://localhost:8080/api/users");
 
